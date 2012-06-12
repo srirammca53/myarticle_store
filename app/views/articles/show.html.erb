@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+ 
+
+<p>
+  <b>Title:</b>
+  <%= @article.title %>
+</p>
+ 
+<p>
+  <b>Content:</b>
+  <%= @article.content %>
+</p>
+ 
+<h2>Comments</h2>
+<%= render @article.comments %>
+ 
+<h2>Add a comment:</h2>
+<%= render "comments/form" %>
+ 
+<br />
+ 
+<%= link_to 'Edit article', edit_article_path(@article) %> |
+<%= link_to 'Back to articles', articles_path %> |
